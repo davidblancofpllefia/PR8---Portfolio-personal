@@ -8,15 +8,16 @@ import Inicio from './componente/Inicio';
 import Proyectos from './componente/Proyectos';
 import SobreMi from './componente/SobreMi';
 import Contacto from './componente/Contacto';
-import Curriculum from './componente/Curriculum';
+import Menu from './componente/Menu';
 
 const App = () => {
   return (
     <NextUIProvider>
-      <GlobalProvider> {/* Utilizar GlobalProvider */}
+      <GlobalProvider> 
         <Header />
         <Routes>
           <Route path="/" element={<Inicio/>} />
+          <Route path="/menu" element={<Menu/>} />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/sobre-mi" element={<SobreMi />} />
           <Route path="/contacto" element={<Contacto />} />
