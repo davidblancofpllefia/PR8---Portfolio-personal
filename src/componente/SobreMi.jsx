@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import GlobalContext from '../context/GlobalContextProvider';
 
 const SobreMi = () => {
   const [fichaTecnicaVentana, setFichaTecnicaVentana] = useState(null);
@@ -12,25 +13,28 @@ const SobreMi = () => {
     }
   };
 
+  const { state } = useContext(GlobalContext);
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen dark:bg-gray-800 text-gray-900 dark:text-gray-100 p-4">
-      <h1 className="text-6xl font-extrabold mb-4 text-blue-700">Sobre Mí</h1>
-      <p className="  text-blue-500 text-2xl text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-cover p-4">
+      <h1 className={`text-entry text-7xl font-extrabold mb-4 ${state.theme === 'light' ? 'text-black' : 'text-white'}`}>Sobre Mí</h1>
+      <div className="w-20 h-1 bg-blue-500 mb-4 text-entry"></div>
+      <p className={`text-entry text-2xl mb-2 ${state.theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
         ¡Hola! Soy David, desarrollador de aplicaciones web.
       </p>
-      <p className="  text-blue-500 text-2xl text-center">
-      Me especializo en diseño y desarrollo web front-end y back-end. Apasionado por la tecnología, disfruto creando experiencias digitales impactantes y siempre busco aprender más sobre nuevas tecnologías.
+      <p className={`text-entry text-2xl mb-2 ${state.theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
+        Me especializo en diseño y desarrollo web front-end y back-end. Apasionado por la tecnología, disfruto creando experiencias digitales impactantes y siempre busco aprender más sobre nuevas tecnologías.
       </p>
-      <p className="mb-4 text-blue-500 text-2xl text-center">
+      <p className={`text-entry text-2xl mb-2 ${state.theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
         Si quieres conocer más sobre mi trabajo, puedes ver mi currículum.
       </p>
       <button
         onClick={handleAbrirPdf}
-        className="inline-block bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition-all duration-300"
+        className="mt-4 inline-block bg-blue-500 text-white px-10 py-5 text-2xl rounded-md hover:bg-blue-600 transition-all duration-300 text-entry"
       >
         Ver mi Currículum
       </button>
-  </div>
+    </div>
   );
 };
 
