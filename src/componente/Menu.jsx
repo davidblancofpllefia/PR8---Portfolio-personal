@@ -19,8 +19,8 @@ const MenuItem = ({ to, text, delay }) => {
 const Menu = () => {
   return (
     <ul className="flex flex-col items-center justify-center h-screen">
-      <MenuItem to="/proyectos" text="Proyectos" delay={0.1} />
-      <MenuItem to="/sobre-mi" text="Sobre Mí" delay={0.2} />
+      <MenuItem to="/sobre-mi" text="Sobre Mí" delay={0.1} />
+      <MenuItem to="/proyectos" text="Proyectos" delay={0.2} />
       <MenuItem to="/contacto" text="Contacto" delay={0.3} />
     </ul>
   );
