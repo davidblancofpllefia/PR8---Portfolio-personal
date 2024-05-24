@@ -1,30 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import GlobalContext from '../context/GlobalContextProvider';
 
 const Contacto = () => {
+  const { state } = useContext(GlobalContext);
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-md">
-        <h1 className="text-2xl font-bold mb-4">Contacto</h1>
-        <p className="mb-4">¡Estaré encantado de escucharte! Puedes contactarme a través de los siguientes medios:</p>
-        <ul className="list-disc list-inside mb-4">
-          <li>Correo electrónico: ejemplo@correo.com</li>
-          <li>Teléfono: 123-456-7890</li>
-        </ul>
+    <>
+      <Link to="/menu" className={`text-6xl hover:text-green-500 ${state.theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
+        ☰
+      </Link>
+      <div className="flex justify-center items-center min-h-screen flex-col">
+        <h1 className={`text-sobremi text-7xl font-extrabold mb-4 ${state.theme === 'light' ? 'text-black' : 'text-white'}`}>Contacto</h1>
+        <hr className="w-20 border-b-4 border-blue-500 mb-8" />
         <div className="flex justify-center space-x-4">
-          <a href="link_del_primero" target="_blank" rel="noopener noreferrer">
-            <img src="icono_1.png" alt="Icono 1" className="w-8 h-8" />
+          <a href="https://github.com/davidblancofpllefia" target="_blank" rel="noopener noreferrer">
+            <img src="public/imagenes/github.png" alt="Icono 1" className="w-20 h-20 text-sobremi" />
           </a>
-          <a href="link_del_segundo" target="_blank" rel="noopener noreferrer">
-            <img src="icono_2.png" alt="Icono 2" className="w-8 h-8" />
+          <a href="https://www.linkedin.com/in/david-blanco-fpllefia/" target="_blank" rel="noopener noreferrer">
+            <img src="public/imagenes/linkedin.png" alt="Icono 2" className="w-20 h-20 text-sobremi" />
           </a>
-          {/* Añade más elementos <a> con diferentes iconos y enlaces */}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
 export default Contacto;
+
+
+
 
 
 

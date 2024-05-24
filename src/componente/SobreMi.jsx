@@ -24,7 +24,7 @@ const SobreMi = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-cover p-4">
   
       <h1 className={`text-sobremi text-7xl font-extrabold mb-4 ${state.theme === 'light' ? 'text-black' : 'text-white'}`}>Sobre Mí</h1>
-      <div className="text-sobremi text-5xl  bg-blue-500 mb-4 "></div>
+      <hr className="text-sobremi w-20 border-b-4 border-blue-500 mb-8" />
       <p className={`text-sobremi text-2xl mb-2 ${state.theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
         ¡Hola! Soy David, desarrollador de aplicaciones web.
       </p>
