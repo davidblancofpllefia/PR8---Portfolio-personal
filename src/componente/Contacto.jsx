@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import GlobalContext from '../context/GlobalContextProvider';
+import github from '/imagenes/github.png';
+import linkedin from '/imagenes/linkedin.png';
 
 const Contacto = () => {
   const { state } = useContext(GlobalContext);
@@ -15,10 +17,10 @@ const Contacto = () => {
         <hr className="w-20 border-b-4 border-blue-500 mb-8" />
         <div className="flex justify-center space-x-4">
           <a href="https://github.com/davidblancofpllefia" target="_blank" rel="noopener noreferrer">
-            <img src="public/imagenes/github.png" alt="Icono 1" className="w-20 h-20 text-sobremi" />
+            <img src={github} alt="GitHub" className="w-20 h-20 text-sobremi" />
           </a>
           <a href="https://www.linkedin.com/in/david-blanco-fpllefia/" target="_blank" rel="noopener noreferrer">
-            <img src="public/imagenes/linkedin.png" alt="Icono 2" className="w-20 h-20 text-sobremi" />
+            <img src={linkedin} alt="LinkedIn" className="w-20 h-20 text-sobremi" />
           </a>
         </div>
       </div>
