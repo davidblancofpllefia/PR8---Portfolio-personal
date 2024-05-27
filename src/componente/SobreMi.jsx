@@ -28,7 +28,7 @@ const SobreMi = () => {
       <p className={`text-sobremi text-2xl mb-2 ${state.theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
         ¡Hola! Soy David, desarrollador de aplicaciones web.
       </p>
-      <p className={`text-sobremi text-2xl mb-2 ${state.theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
+      <p className={`text-sobremi text-2xl mb-2 text-center ${state.theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
         Me especializo en diseño y desarrollo web front-end y back-end. Apasionado por la tecnología, disfruto creando experiencias digitales impactantes y siempre busco aprender más sobre nuevas tecnologías.
       </p>
       <p className={`text-sobremi text-2xl mb-2 ${state.theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
